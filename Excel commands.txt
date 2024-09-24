@@ -1,0 +1,53 @@
+Shortcut to add filter
+Ctrl + Shift + L
+
+If condition
+Example 1: Basic IF Condition
+Suppose you want to check if the value in cell A1 is greater than 10.
+
+=IF(A1 > 10, "Yes", "No")
+	• If A1 contains a value greater than 10, the result will be "Yes".
+	• If A1 contains a value less than or equal to 10, the result will be "No".
+Example 2: IF with Numerical Output
+You can also use numbers as the output:
+
+=IF(A1 >= 50, 100, 0)
+	• If A1 is greater than or equal to 50, the formula will return 100.
+	• Otherwise, it will return 0.
+Example 3: IF with Multiple Conditions (Nested IF)
+If you want to check multiple conditions, you can nest multiple IF functions.
+
+=IF(A1 > 80, "Excellent", IF(A1 > 50, "Good", "Poor"))
+	• If A1 is greater than 80, it returns "Excellent".
+	• If A1 is between 51 and 80, it returns "Good".
+	• If A1 is 50 or below, it returns "Poor".
+Example 4: IF with AND/OR
+You can combine the IF function with AND or OR to test multiple conditions at once.
+	• With AND:
+
+excel
+Copy code
+=IF(AND(A1 > 10, B1 < 20), "Yes", "No")
+		○ This will return "Yes" if both conditions (A1 > 10 and B1 < 20) are true; otherwise, it will return "No".
+	• With OR:
+
+
+=IF(OR(A1 > 10, B1 < 20), "Yes", "No")
+		○ This will return "Yes" if either condition (A1 > 10 or B1 < 20) is true; otherwise, it will return "No".
+Summary:
+The IF function is highly versatile for decision-making tasks in Excel, allowing you to return different values based on logical conditions.
+
+
+
+Code, i have used in project:
+=====================================
+=IF(E2>=50, "Senior",IF(E2>=30,"Adult","Teenager"))
+
+How to convert the dates into month wise
+======================================
+=Text(column,"mmm") ----> It will print the month as jan,feb,mar....dec
+=text(column,"mmmm")---> It will print full month name
+
+
+
+
